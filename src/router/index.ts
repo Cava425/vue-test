@@ -20,10 +20,24 @@ const router = createRouter({
     {
       path: '/nexttick',
       name: 'nexttick',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/nexttick/NextTickTest.vue')
+    },
+    {
+      path: '/communication',
+      name: 'communication',
+      component: () => import('../views/communication/Index.vue'),
+      children: [
+        {
+          path: '/communication/vmodel',
+          name: 'CommunicationVModel',
+          component: () => import('../views/communication/v-model/VModel.vue')
+        },
+        {
+          path: '/communication/pinia',
+          name: 'CommunicationPinia',
+          component: () => import('../views/communication/pinia/Pinia.vue')
+        }
+      ]
     }
   ]
 })

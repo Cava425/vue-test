@@ -18,6 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/nexttick">nexttick</RouterLink>
+        <RouterLink to="/communication">组件通信</RouterLink>
       </nav>
     </div>
   </header>
