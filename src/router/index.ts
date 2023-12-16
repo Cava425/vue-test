@@ -28,14 +28,39 @@ const router = createRouter({
       component: () => import('../views/communication/Index.vue'),
       children: [
         {
+          path: '/communication/props',
+          name: 'CommunicationProps',
+          component: () => import('../views/communication/props/PropsTest.vue')
+        },
+        {
+          path: '/communication/customevent',
+          name: 'CommunicationCustomEvent',
+          component: () => import('../views/communication/custom-event/EventTest.vue')
+        },
+        {
           path: '/communication/vmodel',
           name: 'CommunicationVModel',
           component: () => import('../views/communication/v-model/VModel.vue')
         },
         {
+          path: '/communication/attrs',
+          name: 'CommunicationUseAttrs',
+          component: () => import('../views/communication/useAttrs/UseAttrsTest.vue')
+        },
+        {
+          path: '/communication/inject',
+          name: 'CommunicationInject',
+          component: () => import('../views/communication/inject/InjectTest.vue')
+        },
+        {
           path: '/communication/pinia',
           name: 'CommunicationPinia',
           component: () => import('../views/communication/pinia/Pinia.vue')
+        },
+        {
+          path: '/communication/slot',
+          name: 'CommunicationSlot',
+          component: () => import('../views/communication/slot/SlotTest.vue')
         }
       ]
     }

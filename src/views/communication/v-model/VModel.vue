@@ -1,6 +1,6 @@
 <template>
   <div class="parent">
-    parent: {{ money }}
+    v-model parent: {{ money }}
   </div>
   <!-- <FirstChild :modelValue="money" @update:modelValue="handleUpdate"></FirstChild> -->
   <FirstChild v-model:modelValue="money"></FirstChild>
