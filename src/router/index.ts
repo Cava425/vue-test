@@ -63,6 +63,18 @@ const router = createRouter({
           component: () => import('../views/communication/slot/SlotTest.vue')
         }
       ]
+    },
+    {
+      path: '/html',
+      name: 'html',
+      component: () => import('../views/html/Index.vue'),
+      children: [
+        {
+          path: '/html/table',
+          name: 'Table',
+          component: () => import('../views/html/table/Table.vue')
+        }
+      ]
     }
   ]
 })
