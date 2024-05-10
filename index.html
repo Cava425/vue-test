@@ -9,5 +9,22 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+
+    <iframe id="myIframe" src="./public/Iframe.html" ></iframe>
   </body>
+
+  <script>
+
+    window.addEventListener('message', (event) => {
+      console.log('main window', event)
+    }, false)
+
+      iFrame = document.getElementById('myIframe')
+      console.log('iFrame',iFrame)
+
+      iFrame.onload = function(){
+        console.log('iFrame.contentWindow',iFrame.contentWindow)
+        iFrame.contentWindow.postMessage('qqq', '*')
+      }
+  </script>
 </html>

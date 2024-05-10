@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+<div id="showMessage"></div>
+   
+</body>
+<script>
+   function handleMessageCallback (event) {
+      console.log('handleMessageCallback', event)
+      document.getElementById('showMessage').innerHTML = event.data
+      event.source.postMessage('bbb', '*')
+   }
+
+   window.addEventListener('message', handleMessageCallback)
+</script>
+</html>
